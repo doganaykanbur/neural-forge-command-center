@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+}
+
+:root {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --primary: #38bdf8;
+  --secondary: #1e293b;
+  --accent: #22d3ee;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-50 antialiased selection:bg-cyan-500/30;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .card-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .card-glow::after {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 transition-opacity duration-500 pointer-events-none z-[-1];
+  }
+
+  .glass-panel::before,
+  .glass-panel::after,
+  .card-glow::before,
+  .card-glow::after {
+    pointer-events: none !important;
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+    box-shadow: 0 0 8px currentColor;
+  }
+
+  .progress-bar {
+    @apply h-1.5 w-full bg-slate-800 rounded-full overflow-hidden border border-white/5;
+  }
+
+  .progress-bar-fill {
+    @apply h-full transition-all duration-500 ease-out;
+  }
+
+  /* Badge Styles */
+  .badge-queued { @apply bg-slate-500/10 text-slate-400 border border-slate-500/20; }
+  .badge-assigned { @apply bg-amber-500/10 text-amber-400 border border-amber-500/20; }
+  .badge-running { @apply bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)]; }
+  .badge-completed { @apply bg-emerald-500/10 text-emerald-400 border border-emerald-500/20; }
+  .badge-failed { @apply bg-red-500/10 text-red-400 border border-red-500/20; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700 transition-colors;
+}
+
+/* Animations */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes stripes {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+
+.animate-stripes {
+  animation: stripes 1s linear infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s infinite ease-in-out;
+}

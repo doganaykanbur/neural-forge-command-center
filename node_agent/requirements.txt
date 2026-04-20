@@ -1,0 +1,11 @@
+requests
+python-dotenv
+wexpect
+httpx
+psutil
+GPUtil
+flask
+fastapi
+pytest
+flake8
+docker

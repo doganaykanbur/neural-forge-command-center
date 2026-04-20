@@ -1,0 +1,80 @@
+# ═══════════════════════════════════════════════════
+# Neural Forge Command Center — .gitignore
+# ═══════════════════════════════════════════════════
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual Environments ──
+.venv/
+.venv_node/
+venv/
+env/
+
+# ── Node.js ──
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Next.js ──
+.next/
+out/
+
+# ── Environment & Secrets (CRITICAL — never commit) ──
+.env
+.env.*
+!.env.example
+firebase-key.json
+*.pem
+
+# ── IDE / Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── Logs & Temp Files ──
+*.log
+tmp_*.py
+tmp_*.txt
+simulation_*.log
+simulation_*.txt
+test_results.txt
+test_summary.txt
+pipeline_result.txt
+build.txt
+build_full.log
+lint.json
+eslint_report.json
+result.json
+
+# ── Neural Forge Runtime Data ──
+.nexus/
+.vault/
+artifacts/
+
+# ── Vendored / Bundled Dependencies ──
+node_agent/deps/
+
+# ── Temp Test Directories ──
+backend/pure_visual_test/
+backend/visual_test_temp/
+
+# ── Ignition test logs ──
+ignition_v2.3_test.log
+
+# ── Misc ──
+*.tsbuildinfo
+next-env.d.ts
