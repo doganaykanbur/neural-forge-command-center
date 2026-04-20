@@ -1,4 +1,4 @@
-<![CDATA[<div align="center">
+<div align="center">
 
 # ⚙️ Neural Forge — Command Center
 
@@ -261,6 +261,5 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) for detai
 ---
 
 <div align="center">
-  <sub>Built with ⚡ by <a href="https://github.com/<your-username>">Neural Forge Team</a></sub>
+  <sub>Built with ⚡ by <a href="https://github.com/doganaykanbur">Neural Forge Team</a></sub>
 </div>
-]]>
