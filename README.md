@@ -125,7 +125,7 @@ neural-forge-command-center/
 ### 1. Clone & Setup Backend
 
 ```bash
-git clone https://github.com/<your-username>/neural-forge-command-center.git
+git clone https://github.com/doganaykanbur/neural-forge-command-center.git
 cd neural-forge-command-center
 
 # Install backend dependencies
